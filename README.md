@@ -6,23 +6,28 @@ Write a program that will determine the type of a triangle. It should take the l
 
 ## Business Analysis
 A triangle must meet the following conditions:
+
 1. Any side should be a positive number.
 2. The sum of any two sides should be greater than the third.
 
 ## Technical Design
+
 ### Programming language:
 * go
+
 ### Environment:
 * Ubuntu
+
 ### Unit Test:
 * The go test tool
+
 ### Project structure:
 It is a simple application but it also can be modulized. The main logic can be splitted into serveral small pieces.
 So it will be much easier to maintain, read and test.
 
-main.go: Application entry.
+**main.go**: Application entry.
 
-app/app.go : Functions that exported to determine if it is a triangle.
+**app/app.go** : Functions that exported to determine if it is a triangle.
 * DetermineTriangleType: Determine the type of the triangle.
 * IsTriangle: Check if it is a triangle or not first.
 * AllSidesArePositive: Check if all the sides are positive numbers.
@@ -30,7 +35,7 @@ app/app.go : Functions that exported to determine if it is a triangle.
 * AllSidesAreEqual: Check all the sides are equal or not.
 * TwoSidesAreEqual: Check any two sides are equal or not.
 
-app/app_test.go: Unit Test, the go test tool seems doesn't have something like the assertion in other programming language.
+**app/app_test.go**: Unit Test, the go test tool seems doesn't have something like the assertion in other programming language.
 ```
 ➜  app git:(master) ✗ go test
 PASS
@@ -48,7 +53,7 @@ Run the application:
 2
 3
 ```
-Test th application:
+Test the application:
 ```
 ➜  triangle-challenge git:(master) ✗ cd app
 ➜  app git:(master) ✗ go test 
