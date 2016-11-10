@@ -52,6 +52,7 @@ func AllSidesArePositive(a float64, b float64, c float64) bool {
 
 // AnyTwoSidesAreGreaterThanTheThrid is used to check if the sum of any two sides is greater than the third side.
 func AnyTwoSidesAreGreaterThanTheThrid(a float64, b float64, c float64) bool {
+	// We may need to consider about the float64 overflow if a + b > the max value of float64
 	if a+b <= c || a+c <= b || b+c <= a {
 		return false
 	}
